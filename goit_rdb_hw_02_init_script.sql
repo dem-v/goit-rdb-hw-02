@@ -103,10 +103,11 @@ ENGINE = InnoDB;
 -- Table `mydb`.`third_normalized_order_details`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`third_normalized_order_details` (
+  `id_details` INT NOT NULL AUTO_INCREMENT,
   `order_number` INT NOT NULL,
   `item_name` VARCHAR(255) NULL,
   `item_qty` INT NULL,
-  PRIMARY KEY (`order_number`),
+  PRIMARY KEY (`id_details`),
   CONSTRAINT `ordernum`
     FOREIGN KEY (`order_number`)
     REFERENCES `mydb`.`third_normalized_orders` (`order_number`)
